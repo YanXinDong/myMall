@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rl_logistics_bg"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/line_c" />
+
+        <ImageView
+            android:id="@+id/iv_logistics_dian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/dian_b" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/rl_logistics_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/rl_logistics_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_logistics_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="西安转运中心公司 已收入"
+            android:textColor="@color/font_black"
+            android:minLines="2"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_below="@id/tv_logistics_info"
+            android:id="@+id/tv_logistics_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="2015-11-05  08:15：20" />
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/emojicon_tab_selected" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/color_black_333333"
+        android:textSize="12sp"
+        tools:text="法国兰蔻玫瑰" />
+
+    <TextView
+        android:id="@+id/tv_refund_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_shop_name"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/blue_FF4990E2"
+        android:textSize="12sp"
+        tools:text="退款中" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_shop_name"
+        android:background="@color/grey_f0f0f0"
+        />
+
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:id="@+id/iv_icon"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@id/tv_shop_name"
+        android:background="@color/black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignTop="@id/iv_icon"
+        android:layout_toRightOf="@id/iv_icon"
+        android:layout_toEndOf="@id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="中古二手Gucci古驰竹节款单肩包中古二手Gucci古驰竹节款单肩包中古二手Gucci古驰竹节款单肩包"
+        android:maxLines="2"
+        android:minLines="2"
+        android:ellipsize="end"
+        android:textSize="13sp"
+        android:textColor="@color/color_black_ff666666"
+        />
+
+    <TextView
+        android:id="@+id/tv_norms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_toRightOf="@id/iv_icon"
+        android:layout_toEndOf="@id/iv_icon"
+        tools:text="200ml"
+        android:textSize="11sp"
+        android:textColor="@color/color_grey_999999"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_below="@id/tv_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/colorZhu"
+        tools:text="x5"
+        />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_below="@id/tv_number"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/colorZhu"
+        tools:text="合计¥ 124800.00"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/grey_f0f0f0"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

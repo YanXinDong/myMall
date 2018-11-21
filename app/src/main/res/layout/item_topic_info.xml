@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_topic_title"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_topic_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+         />
+
+    <TextView
+        android:id="@+id/tv_topic_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toEndOf="@id/iv_topic_icon"
+        android:layout_toRightOf="@id/iv_topic_icon"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/color_black_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="6月份装萌怀念青春的日子，一起推荐最佳搭配，骨格渐变是规律性骨格的一种，是指骨格的形状、大小、方向、位置、色彩等依次发生变化。渐变骨格和其他规律性骨格一样" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_participation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_topic_icon"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/iv_topic_icon"
+        android:layout_toRightOf="@id/iv_topic_icon"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="12sp"
+        tools:text="参与  302" />
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/view_flag"
+        android:layout_width="1dp"
+        android:layout_height="13dp"
+        android:layout_alignBottom="@id/iv_topic_icon"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/tv_participation"
+        android:layout_toRightOf="@id/tv_participation"
+        android:background="#d8d8d8" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_subscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_topic_icon"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/view_flag"
+        android:layout_toRightOf="@id/view_flag"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="12sp"
+        tools:text="订阅  4345" />
+
+    <CheckBox
+        android:id="@+id/cb_subscription"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_topic_info"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/cb_frame_blue_or_gray"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/subscription"
+        android:textColor="@drawable/selecter_text_035de9"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

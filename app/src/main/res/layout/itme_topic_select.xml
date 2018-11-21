@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv_layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="9dp">
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="9dp"
+                android:layout_toRightOf="@id/iv_head"
+                tools:text="玉树临风"
+                android:textColor="#FF333333"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                tools:text="2017-07-13"
+                android:textColor="#FF999999"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_below="@id/rl_layout"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="15dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_pic"
+            android:layout_below="@id/iv_pic"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="可以是可见的，也可以是不可见的，可以是作用性的。也可以是无作用性的。"
+            android:textColor="#FF333333"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_hot_topic"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_hot_topic_icon"
+        android:layout_width="108dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="10dp"
+         />
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_topic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_hot_topic_icon"
+        tools:text="多肉植物  肉肉~拼盘"
+        android:textColor="@color/color_black_333333"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_topic_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_topic_name"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@id/iv_hot_topic_icon"
+        tools:text="共4352人参加"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/arrow" />
+</RelativeLayout>

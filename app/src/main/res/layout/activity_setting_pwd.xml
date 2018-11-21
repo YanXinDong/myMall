@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_regist_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_regist"
+        android:drawableLeft="@drawable/lockicon"
+        android:drawablePadding="15dp"
+        android:hint="@string/import_new_pwd"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@android:color/darker_gray"/>
+
+    <EditText
+        android:id="@+id/et_again_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_regist"
+        android:drawableLeft="@drawable/lockicon"
+        android:drawablePadding="10dp"
+        android:hint="@string/affirm_new_pwd"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@android:color/darker_gray"/>
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/btn_regist_finish"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape_circle_range1"
+        android:text="@string/register_finish"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"/>
+</LinearLayout>

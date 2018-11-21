@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_hint_empty_cart"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/btn_empty_shopping"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_circle_range2"
+        android:text="@string/go_shopping"
+        android:textColor="@color/colorZhu" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_empty_shopping"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/cart_empty" />
+
+</RelativeLayout>

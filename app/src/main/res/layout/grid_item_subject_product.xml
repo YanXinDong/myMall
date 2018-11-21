@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_subjectproduct"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/iv_product_icon"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/zhanwei4"
+         />
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/tv_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_product_icon"
+        android:layout_margin="5dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxLines="2"
+        android:textSize="13sp"
+        tools:text="精品韩国风" />
+
+    <TextView
+        android:id="@+id/tv_price_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_product_name"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/btn_text_price"
+         />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/tv_price_left"
+        android:background="#ededed" />
+
+    <TextView
+        android:id="@+id/tv_price_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_product_name"
+        android:layout_centerVertical="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/gray"
+        android:textSize="13sp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_country_inco"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/tv_price_right"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+         />
+
+    <TextView
+        android:id="@+id/tv_country_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_price_right"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/iv_country_inco"
+        tools:text="美国"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_fax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_country_text"
+        android:layout_below="@id/tv_price_right"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"
+        android:singleLine="true" />
+
+    <ImageView
+        android:id="@+id/iv_free_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_price_right"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/taxtag"
+        android:visibility="gone" />
+</com.zhy.autolayout.AutoRelativeLayout>

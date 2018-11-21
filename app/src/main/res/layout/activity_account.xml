@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:background="@android:color/white"
+                    android:id="@+id/rl_edit_address"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="70dp"
+                    >
+                    <TextView
+                        android:id="@+id/tv_add_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="您还没有收货地址，请添加~"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/tv_address_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/tv_address_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_toRightOf="@id/tv_address_name"
+                        />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/tv_account_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_address_name"
+                        android:layout_marginTop="10dp"
+                        android:minLines="1"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_address_manager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/list_arrow"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_account_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"/>
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/tv_total_yunfei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:layout_toLeftOf="@id/tv_total_yunfei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gross_freight"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"/>
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/tv_total_shuifei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:layout_toLeftOf="@id/tv_total_shuifei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_taxes"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"/>
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/tv_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:layout_toLeftOf="@id/tv_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_money"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/tv_account_jifen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="积分可抵扣--"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_isintegral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="10dp"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:id="@+id/view_bg"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray"
+                />
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/tv_heji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/total"/>
+
+            <TextView
+                android:id="@+id/tv_heji_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@id/tv_heji"
+                android:textColor="@color/btn_text_price"
+                android:textSize="18sp"/>
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/btn_cart_accaount"
+                android:layout_width="120dp"
+                android:layout_height="49dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/btn_text_price"
+                android:gravity="center"
+                android:text="@string/submit_order"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

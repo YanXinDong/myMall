@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <!--ViewPager是根据图片的高度动态设置的，不能用wrap_content，
+    使用wrap_content时ViewPager第一次可见的时候是没有高度的，默认给1dp
+    (已被设计师改成固定高度。。。。艹)
+    -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="460dp" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="40dp"
+        android:layout_height="18dp"
+        android:layout_alignBottom="@id/vp_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/back_color_click"
+        android:gravity="center"
+        android:text="--/--"
+        android:textColor="@color/color_black_333333"
+        android:textSize="12sp" />
+
+</RelativeLayout>

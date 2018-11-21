@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    >
+
+    <com.netease.nim.uikit.common.ui.ptr.PullToRefreshListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#f0f0f0"
+        android:dividerHeight="5dp"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both"/>
+    <ImageView
+        android:id="@+id/zhanwei_rabit"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:background="@drawable/empty_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

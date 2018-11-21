@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_product_info"
+    android:layout_width="140dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:layout_marginRight="10dp">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/iv_icon"
+        android:layout_alignRight="@id/iv_icon"
+        android:layout_below="@id/iv_icon"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:minLines="2"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="12sp"
+        tools:text="澳洲直邮OZWEAR UGG 女鞋女士亮面拉链鞋澳洲直邮OZWEAR UGG" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:text="¥ 598" />
+
+    <CheckBox
+        android:id="@+id/cb_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@id/iv_icon"
+        android:layout_alignRight="@id/iv_icon"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="15dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/collect_select"
+        android:drawablePadding="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/color_black_ff666666"
+        android:visibility="gone" />
+
+</RelativeLayout>

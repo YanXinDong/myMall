@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btn_all_comment"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="140dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_bg_white_frame_gray"
+        android:text="@string/look_all_comment"
+        android:textColor="@color/color_grey_999999"
+        android:textSize="11sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_fail_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_fail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/not_pass_cause"
+            android:textColor="@color/color_black_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_fail_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="45dp"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp"
+            tools:text="多肉植物 肉肉~多肉拼盘违反抹去我我欧股hiUR四大金刚
+铂金二咖啡馆可萝卜干额就本店店主长期居住在意大利，
+有6-7个小时时差。本店所有货源均来自意大利各大精品
+专柜打折村，保证正品。支持发小视频哟~~" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_praise"
+    xmlns:yxd="http://schemas.android.com/apk/res-auto"
+    android:gravity="center">
+
+    <com.BFMe.BFMBuyer.view.CircularImageView
+        android:id="@+id/clv_head"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="26dp"
+        yxd:type="circle"
+        android:src="@drawable/zhanwei1"
+        android:layout_height="26dp" />
+
+</RelativeLayout>

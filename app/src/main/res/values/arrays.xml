@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="adBlockDiv">
+        <item>bm_header</item>
+        <item>wx_aside</item>
+        <item>bm_w_p100</item>
+        <item>bm_footer clearfloat</item>
+    </string-array>
+
+</resources>

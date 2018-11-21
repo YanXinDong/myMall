@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_shoujianren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/recipients"/>
+
+            <EditText
+                android:textSize="15dp"
+                android:id="@+id/dt_address_name"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:maxLines="1"
+                android:layout_toRightOf="@id/tv_shoujianren"
+                android:background="@drawable/shape_regist"
+                android:padding="8dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_shouji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/mobile_phone"/>
+
+            <EditText
+                android:textSize="15dp"
+                android:maxLines="1"
+                android:maxLength="11"
+                android:id="@+id/tv_address_phone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:inputType="phone"
+                android:layout_toRightOf="@id/tv_shouji"
+                android:background="@drawable/shape_regist"
+                android:padding="8dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_aror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/province"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="8dp"
+                android:src="@drawable/list_arrow"/>
+
+            <TextView
+                android:id="@+id/tv_addaddress_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:layout_toRightOf="@id/tv_aror"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_xiangxi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/detailed_address"/>
+
+            <EditText
+                android:textSize="15dp"
+                android:id="@+id/et_address_detail"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:layout_toRightOf="@id/tv_xiangxi"
+                android:background="@drawable/shape_regist"
+                android:paddingTop="18dp"
+                android:paddingLeft="8dp"
+                android:paddingBottom="20dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_shenfen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/id_number"/>
+
+            <EditText
+                android:textSize="15dp"
+                android:maxLines="1"
+                android:id="@+id/et_idcard"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:layout_toRightOf="@id/tv_shenfen"
+                android:background="@drawable/shape_regist"
+                android:padding="8dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/btn_keep_address"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_circle_range1"
+        android:text="@string/save"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"/>
+</LinearLayout>

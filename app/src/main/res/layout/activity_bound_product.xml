@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bound_product"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+
+    >
+
+    <View
+        android:id="@+id/iv_search_bg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white" />
+
+    <EditText
+        android:id="@+id/et_search_circle"
+        android:layout_width="290dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/drawable_search_bg"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="7dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/search_hint"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="12dp"
+        android:singleLine="true"
+        android:textColor="#FF666666"
+        android:textColorHint="#FF666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_search_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/cancel"
+        android:textColor="@color/colorZhu"
+        android:textSize="13sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/iv_search_bg"
+        android:background="#f0f0f0" />
+
+    <RelativeLayout
+        android:id="@+id/rl_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_below="@id/view"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/from_order"
+            android:textColor="#FF333333"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/iv_relationmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrow"
+            android:padding="5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f0f0f0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rv_layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_layout2"
+        android:layout_marginTop="5dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_recently_viewed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/history_search"
+            android:textColor="#FF999999"
+            android:textSize="11sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_recently_viewed"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/tv_recently_viewed"
+            android:layout_marginTop="10dp"
+            android:overScrollMode="never"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_no_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_recently_viewed"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/no_history_search"
+            android:textColor="#FF666666"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_clear_recently"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="310dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/shape_circle_range5"
+        android:text="@string/clear_history"
+        android:textColor="#FF000000"
+        android:textSize="13sp" />
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/rv_result"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_layout2"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_no_create"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/rl_layout2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/no_create"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_no_result"
+        android:layout_width="110dp"
+        android:layout_height="140dp"
+        android:layout_below="@id/rl_layout2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/no_result"
+        android:visibility="gone" />
+</RelativeLayout>

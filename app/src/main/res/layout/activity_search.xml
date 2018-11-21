@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <View
+        android:id="@+id/iv_search_bg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white" />
+
+    <EditText
+        android:id="@+id/et_search_circle"
+        android:layout_width="290dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/drawable_search_bg"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="7dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/search_overall"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="18dp"
+        android:singleLine="true"
+        android:textColor="#FF666666"
+        android:textColorHint="#FF666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_search_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/cancel"
+        android:textColor="@color/colorZhu"
+        android:textSize="13sp" />
+
+
+    <RadioGroup
+        android:id="@+id/rg_sort"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/iv_search_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/blue_bottom_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/commodity"
+            android:textColor="@drawable/text_selector_zhu" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/blue_bottom_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/topic"
+            android:textColor="@drawable/text_selector_zhu" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/blue_bottom_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/shop"
+            android:textColor="@drawable/text_selector_zhu" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rg_sort"
+        android:background="#f0f0f0" />
+
+    <TextView
+        android:id="@+id/tv_all_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/all_search"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <com.BFMe.BFMBuyer.view.flowlayout.FlowTagLayout
+        android:id="@+id/ftl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_all_search"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/tv_recently_viewed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ftl_search"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/recently_viewed"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_clear_recently"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@color/grey_f0f0f0"
+        android:text="@string/clear_history"
+        android:textColor="#FF000000"
+        android:textSize="13sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recently_viewed"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@id/btn_clear_recently"
+        android:layout_below="@id/tv_recently_viewed"
+        android:layout_marginLeft="25dp"
+        android:overScrollMode="never"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rv_think"
+        android:layout_below="@id/rg_sort"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_subjectproduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_product_icon"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:lines="2"
+        android:paddingTop="5dp"
+        android:textColor="@color/gray_dark_bg"
+        android:textSize="12sp"
+        tools:text="香水不香水合适的话三" />
+
+
+    <TextView
+        android:id="@+id/tv_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_product_name"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/font_black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="¥150.00" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_IsSeckill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_product_name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/tv_product_price"
+        android:layout_toRightOf="@id/tv_product_price"
+        android:background="@drawable/shape_circle_range_red"
+        android:paddingBottom="1dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="1dp"
+        android:text="@string/seckill_price"
+        android:textColor="@color/search_text_color"
+        android:textSize="12sp"
+         />
+
+    <TextView
+        android:id="@+id/tv_sale_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tv_product_price"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="已售200件" />
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_product_name"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="9dp" />
+
+    <ImageView
+        android:id="@+id/iv_product_icon"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/zhanwei4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yxd="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv_item_comment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@color/white">
+
+    <com.BFMe.BFMBuyer.view.CircularImageView
+        android:id="@+id/civ_comment_head"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/zhanwei1"
+        yxd:type="circle" />
+
+    <TextView
+        android:id="@+id/tv_comment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/civ_comment_head"
+        android:layout_toRightOf="@id/civ_comment_head"
+        tools:text="楼上是傻逼"
+        android:textColor="@color/color_black_333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_comment_name"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/civ_comment_head"
+        android:layout_toRightOf="@id/civ_comment_head"
+        android:lineSpacingExtra="6dp"
+        tools:text="骨格渐变是规律性骨格的一种，是指骨格的形状、大小、方向、位置、色彩等依次发生变化。渐变骨格和其他规律性骨格一样，可以是可见的，也可以是不可见的，可以是作用性的。也可以是无作用性的。"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_comment_content"
+        android:layout_alignStart="@id/tv_comment_content"
+        android:layout_below="@id/tv_comment_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        tools:text="2017-07-13  15:35:41"
+        android:textColor="@color/color_grey_999999"
+        android:textSize="9sp" />
+
+    <CheckBox
+        android:id="@+id/cb_praise"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/tv_comment_content"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/iv_commodity"
+        android:layout_toStartOf="@id/iv_commodity"
+        android:button="@null"
+        android:drawableLeft="@drawable/praise_select"
+        android:drawablePadding="5dp"
+        tools:text="2510"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="13sp" />
+
+</RelativeLayout>

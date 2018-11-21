@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="145dp"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+        android:background="#66000000"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:text="@string/buy_soldout" />
+
+    <TextView
+        android:id="@+id/tv_time_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_icon"
+        android:layout_toEndOf="@id/iv_icon"
+        android:layout_toRightOf="@id/iv_icon"
+        android:textColor="@color/color_black_333333"
+        android:textSize="11sp"
+        tools:text="距结束" />
+
+    <cn.iwgang.countdownview.CountdownView
+        android:id="@+id/countdownView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_icon"
+        android:layout_toEndOf="@id/tv_time_hint"
+        android:layout_toRightOf="@id/tv_time_hint"
+        app:isHideTimeBackground="true"
+        app:isShowDay="true"
+        app:isShowHour="true"
+        app:isShowMinute="true"
+        app:isShowSecond="true"
+        app:suffixDay="天  "
+        app:suffixHour=":"
+        app:suffixLRMargin="0dp"
+        app:suffixMinute=":"
+        app:suffixTextColor="@color/color_black_333333"
+        app:suffixTextSize="10sp"
+        app:timeTextColor="@color/color_black_333333"
+        app:timeTextSize="11sp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time_hint"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/iv_icon"
+        android:lineSpacingExtra="3dp"
+        android:layout_toRightOf="@id/iv_icon"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:minLines="2"
+        android:textColor="@color/color_black_333333"
+        android:textSize="12sp"
+        tools:text="法国Lancome兰蔻玫瑰露清莹柔肤化妆水法国Lancome兰蔻玫瑰露清莹柔肤化妆" />
+
+    <TextView
+        android:id="@+id/tv_new_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/iv_icon"
+        android:layout_toRightOf="@id/iv_icon"
+        android:textColor="@color/colorZhu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="¥ 1780.00" />
+
+    <TextView
+        android:id="@+id/tv_old_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_new_price"
+        android:layout_toEndOf="@id/iv_icon"
+        android:layout_toRightOf="@id/iv_icon"
+        android:textColor="@color/color_grey_999999"
+        android:textSize="10sp"
+        tools:text="¥ 2800.00" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/tv_new_price"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="11sp"
+        tools:text="剩余394件" />
+
+    <Button
+        android:id="@+id/btn_go"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="26dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tv_old_price"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_circle_range2"
+        android:text="@string/snapped_up_immediately"
+        android:textColor="@color/colorZhu"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/grey_f0f0f0"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

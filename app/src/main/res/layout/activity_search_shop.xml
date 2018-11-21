@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/iv_search_bg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white" />
+
+    <EditText
+        android:id="@+id/et_search_circle2"
+        android:layout_width="245dp"
+        android:layout_height="31dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/drawable_search_bg"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="7dp"
+        android:hint="@string/search_shop_hint"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:textColor="@color/colorZhu"
+        android:textColorHint="@color/colorZhu"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_search_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/cancel"
+        android:textColor="@color/colorZhu" />
+
+    <com.netease.nim.uikit.common.ui.ptr.PullToRefreshGridView
+        android:id="@+id/gv_search_shop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_search_bg"
+        android:clipToPadding="false"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:verticalSpacing="5dp"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both" />
+
+    <include
+        android:id="@+id/pb_load"
+        layout="@layout/progressbar"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_load"
+        android:layout_centerInParent="true"
+        android:text="@string/load"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/iv_search_bg"
+        android:background="#f0f0f0" />
+</RelativeLayout>

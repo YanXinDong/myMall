@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_order_introduction"
+    android:background="@color/translucence_gray_fafafafa">
+
+    <include layout="@layout/order_commodity_item"
+        android:id="@+id/include_flag"
+        />
+
+    <Button
+        android:id="@+id/bt_refund"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="26dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/include_flag"
+        android:layout_margin="10.0dip"
+        android:background="@drawable/shape_circle_range2"
+        android:text="@string/apply_for_after_sales"
+        android:textColor="@color/colorZhu"
+        android:textSize="12sp" />
+</RelativeLayout>

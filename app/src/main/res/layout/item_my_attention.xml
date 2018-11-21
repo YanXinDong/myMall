@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="57dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/iv_head_attention"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+         />
+
+    <TextView
+        android:id="@+id/tv_name_attention"
+        android:layout_width="150dp"
+        android:layout_height="17dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_head_attention"
+        android:ellipsize="end"
+        android:lines="1"
+        tools:text="楼上是傻逼"
+        android:textColor="#FF333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_content_attention"
+        android:layout_width="210dp"
+        android:layout_height="14dp"
+        android:layout_below="@id/tv_name_attention"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_head_attention"
+        android:ellipsize="end"
+        android:lines="1"
+        tools:text="454个笔记，3415645个粉丝"
+        android:textColor="#FF666666"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/iv_attention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/attention" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#F0F0F0" />
+</RelativeLayout>

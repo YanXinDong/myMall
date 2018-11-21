@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_layout"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        tools:text="2017.04.21   20:36:09"
+        android:textColor="#FF666666"
+        android:textSize="11sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/iv_pic_logistic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="15dp"
+            android:background="@color/black" />
+
+        <TextView
+
+            android:id="@+id/tv_content_logistics"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignTop="@+id/iv_pic_logistic"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/iv_pic_logistic"
+            android:ellipsize="end"
+            tools:text="可以是可见的，也可以是不可见的，可以是作用性的。也可以是无作用性的。"
+            android:textColor="#FF333333"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>

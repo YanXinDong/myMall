@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_selfdata"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/head_portrait"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/iv_headmore"
+            android:src="@drawable/ic_stub_circle" />
+
+        <ImageButton
+            android:id="@+id/iv_headmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrow" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_nick"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/nick"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/iv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/iv_nickmore"
+            android:gravity="center_vertical"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:textColor="@color/color_black_333333"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/iv_nickmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_mima"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/figet_mima"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp" />
+
+
+        <ImageButton
+            android:id="@+id/iv_mimamore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_phone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/setting_phone"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_setting_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/iv_setting_phone"
+            android:gravity="center_vertical" />
+
+        <ImageButton
+            android:id="@+id/iv_setting_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_edit_infodata"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/edit_qianming"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_signname"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/iv_edit_infodata"
+            android:ellipsize="end"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:textColor="@color/color_black_333333"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/iv_edit_infodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_identity_authentication"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/identity_authentication"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_identity_hint"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/ib_identity_authentication"
+            android:ellipsize="end"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:textColor="@color/color_black_333333"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/ib_identity_authentication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrow" />
+    </RelativeLayout>
+
+
+</LinearLayout>

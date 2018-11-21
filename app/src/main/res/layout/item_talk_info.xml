@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        tools:text="2017-06-01"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/iv_commodity"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/icon_comment"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        tools:text="2510"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="13sp" />
+
+    <CheckBox
+        android:id="@+id/cb_praise"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_toLeftOf="@id/iv_commodity"
+        android:layout_toStartOf="@id/iv_commodity"
+        android:button="@null"
+        android:drawableLeft="@drawable/collect_select"
+        android:drawablePadding="5dp"
+        tools:text="2510"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="13sp" />
+
+</RelativeLayout>

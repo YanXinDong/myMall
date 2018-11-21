@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingBottom="7dp"
+    android:paddingRight="10dp"
+    android:paddingTop="7dp">
+
+    <ImageView
+        android:id="@+id/iv_accomunt_product"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/iv_accomunt_product">
+
+        <TextView
+            android:id="@+id/tv_account_des"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_color_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_accomunt_product"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/iv_accomunt_product">
+
+        <TextView
+            android:id="@+id/tv_item_yun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv_item_shuifei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_commodity_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_accomunt_product"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/iv_accomunt_product">
+
+        <TextView
+            android:id="@+id/tv_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/btn_text_price"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_item_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_commodity_info"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray" />
+
+</RelativeLayout>
+

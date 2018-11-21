@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+         />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_icon"
+        android:layout_marginEnd="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/iv_icon"
+        android:layout_toRightOf="@id/iv_icon"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="12sp"
+        tools:text="法国Lancome兰蔻玫瑰露清莹柔肤化妆法国Lancome兰蔻玫瑰露清莹柔肤化妆法国Lancome兰蔻玫瑰露清莹柔肤化妆" />
+
+    <TextView
+        android:id="@+id/tv_new_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/iv_icon"
+        android:layout_toRightOf="@id/iv_icon"
+        android:textColor="@color/colorZhu"
+        android:textSize="13sp"
+        tools:text="¥ 36.60" />
+
+    <TextView
+        android:id="@+id/tv_old_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/tv_new_price"
+        android:layout_toRightOf="@id/tv_new_price"
+        android:textColor="@color/color_grey_999999"
+        android:textSize="10sp"
+        tools:text="¥ 36.60" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/app_body_bg"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

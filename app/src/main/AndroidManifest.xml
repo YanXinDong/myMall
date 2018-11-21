@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.BFMe.BFMBuyer">
+
+    <!-- SDK权限声明，第三方APP接入时，请将com.netease.nim.demo替换为自己的包名 -->
+    <permission
+        android:name="com.BFMe.BFMBuyer.permission.RECEIVE_MSG"
+        android:protectionLevel="signature" />
+
+    <!-- Required -->
+    <permission
+        android:name="com.BFMe.BFMBuyer.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required -->
+    <uses-permission android:name="com.BFMe.BFMBuyer.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 权限声明 -->
+    <!-- 访问网络状态 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 多媒体相关 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 如果需要实时音视频通话模块，下面的权限也是必须的。否则，可以不加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 接收SDK消息广播权限， 第三方APP接入时，请将com.netease.nim.demo替换为自己的包名 -->
+    <uses-permission android:name="com.BFMe.BFMBuyer.permission.RECEIVE_MSG" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 拨打电话的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MANAGE_LOCATION_POLICY" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="923e0efe9ea96f7461b404d5ad8b49d9" />
+
+        <service android:name="com.amap.api.location.APSService" />
+        <!-- app key -->
+        <meta-data
+            android:name="com.netease.nim.appKey"
+            android:value="be703e84439e74219e9ec0146298e079" />
+
+        <!-- 声明云信后台服务，如需保持后台推送，使用独立进程效果会更好。 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService"
+            android:process=":core" />
+        <service
+            android:name="com.netease.nimlib.service.NimService$Aux"
+            android:process=":core" />
+
+        <!--
+             云信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录，
+            保持和 NimService 同一进程
+        -->
+        <receiver
+            android:name="com.netease.nimlib.service.NimReceiver"
+            android:exported="false"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 云信进程间通信 Receiver -->
+        <receiver android:name="com.netease.nimlib.service.ResponseReceiver" />
+
+        <!-- 安卓保活配置 -->
+        <service
+            android:name="com.netease.cosine.core.CosineService"
+            android:process=":cosine" />
+
+        <receiver
+            android:name="com.netease.cosine.target.CosineReceiver"
+            android:exported="true"
+            android:process=":cosine" />
+
+        <meta-data
+            android:name="com.netease.cosine.target"
+            android:value="" />
+        <meta-data
+            android:name="com.netease.cosine.target.receiver"
+            android:value="com.netease.nimlib.service.NimReceiver" />
+        <meta-data
+            android:name="com.BFMe.BFMBuyer.utils.GlideConfiguration"
+            android:value="GlideModule" />
+
+        <!-- 极光推送 -->
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.BFMe.BFMBuyer" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+
+                <category android:name="com.BFMe.BFMBuyer" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.BFMe.BFMBuyer" />
+            </intent-filter>
+        </activity>
+        <!-- SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.BFMe.BFMBuyer" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- User defined. 用户自定义的广播接收器 -->
+        <receiver
+            android:name=".jpush.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.BFMe.BFMBuyer" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- 渠道统计报表位于控制台页面的 “统计”-“用户统计”-“渠道分布” 中 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="${JPUSH_CHANNEL_VALUE}" />
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="f5f59e0f0526be3093d9ed6e" />
+        <!-- 极光推送 -->
+
+
+        <!-- 7.0适配问题 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.BFMe.BFMBuyer.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 基类 -->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UserRegistAgreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SubjectListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".commodity.activity.LimitBuyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".search.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CommentProductsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".commodity.activity.ProducetDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShoppingCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddressMangerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChoosePayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".activity.CommentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HelpDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelfInfoDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeNickActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeTelephoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LogisticsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ComplaintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ApplyFordrawbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.ImmediatelBuyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SaleServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RefundDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AboutBFMeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelectCitiesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChooseSpecificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".search.activity.SearchShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HotShopActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- NimService 组件。 如需保持后台推送，使用独立进程效果会更好。 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService"
+            android:process=":core" />
+        <!-- 运行后台辅助服务 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService$Aux"
+            android:process=":core" />
+
+        <!-- 状态监听 Receiver，保持和 NimService 同一进程 -->
+        <receiver
+            android:name="com.netease.nimlib.service.NimReceiver"
+            android:exported="false"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 云信进程间通信 Receiver -->
+        <receiver android:name="com.netease.nimlib.service.ResponseReceiver" />
+
+        <meta-data
+            android:name="design_width"
+            android:value="640" />
+        <meta-data
+            android:name="design_height"
+            android:value="1136" />
+
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity android:name=".activity.PromotionActivity" />
+        <activity android:name=".activity.ImageLargeActivity" />
+        <activity android:name=".ugc.activity.AllTopicActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="buyer.com"
+                    android:pathPrefix="/openAllTopic"
+                    android:scheme="bfme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.RecentListActivity" />
+        <activity
+            android:name=".ugc.activity.TaTalkDetailsActivity"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="buyer.com"
+                    android:pathPrefix="/openTaTalkDetail"
+                    android:scheme="bfme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ugc.activity.AllCommentActivity" />
+        <activity android:name=".ugc.activity.UserInfoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="buyer.com"
+                    android:pathPrefix="/openUserInfo"
+                    android:scheme="bfme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ugc.activity.CreateTopicActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activity.MyCollectActivity" />
+        <activity
+            android:name=".ugc.activity.PhotoPickerActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ugc.activity.MyCommentActivity" />
+        <activity android:name=".ugc.activity.BoundProductActivity" />
+        <activity android:name=".ugc.activity.AttentionAndFansActivity" />
+        <activity android:name=".activity.EditSignActivity" />
+        <activity android:name=".ugc.activity.TopicStatusActivity" />
+
+        <!-- 分享 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 结束 -->
+
+        <activity android:name=".ugc.activity.NewsCommentActivity" />
+        <activity android:name=".ugc.activity.OfficialActivity" />
+        <activity android:name=".ugc.activity.TopicSelectActivity" />
+        <activity android:name=".ugc.activity.LogisticsActivity" />
+        <activity android:name=".ugc.activity.PushSettingActivity" />
+        <activity android:name=".ugc.activity.AllTopicSortActivity" />
+        <activity android:name=".search.activity.SearchResultActivity" />
+        <activity
+            android:name=".main.MainActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".shop.activity.RegionFiltrateActivity" />
+        <activity android:name=".shop.activity.BrandFiltrateActivity" />
+        <activity android:name=".shop.activity.ShopListActivity" />
+        <activity android:name=".shop.activity.ShopFiltrateActivity" />
+        <activity android:name=".activity.SubCategoryActivity" />
+        <activity android:name=".ugc.activity.TopicCategoryActivity" />
+        <activity
+            android:name=".ugc.activity.UserIconActivity"
+            android:theme="@style/myTransparency" />
+        <activity android:name=".commodity.activity.CommodityFiltrateActivity" />
+        <activity android:name=".commodity.activity.CommodityListActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity
+            android:name=".share.SelectShareCategoryActivity"
+            android:theme="@style/myTransparency" />
+        <activity android:name=".activity.EditIdentityActivity" />
+        <activity android:name=".commodity.activity.HotProductActivity" />
+        <activity android:name=".activity.AddExpressInformationActivity" />
+        <activity android:name=".shop.activity.ShopHomeActivity"/>
+        <activity android:name=".activity.UploadVoucherActivity"/>
+
+        <activity android:name=".activity.OnekeyBinderActivity"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yxd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <com.BFMe.BFMBuyer.view.CircularImageView
+        android:id="@+id/civ_user_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/zhanwei1"
+        yxd:type="circle" />
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/civ_user_icon"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        tools:text="6月份装萌怀念青春的日子，一起推荐最佳搭配，有你最适合的宝贝"
+        android:textColor="@color/color_black_333333"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/cb_attention"
+        android:layout_width="140dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/tv_intro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/cb_frame_blue_or_gray"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/notice_total"
+        android:textColor="@drawable/selecter_text_035de9"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cb_attention"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_user_zan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="12331"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_user_topic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="24124"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_user_attention"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="2331"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_user_fans"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:text="1414141"
+            android:textColor="@color/color_black_333333"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_title"
+        android:layout_marginBottom="11dp"
+        android:layout_marginTop="3dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/praise"
+            android:textColor="@color/color_black_ff666666"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/topic"
+            android:textColor="@color/color_black_ff666666"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/notice_total"
+            android:textColor="@color/color_black_ff666666"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fans"
+            android:textColor="@color/color_black_ff666666"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

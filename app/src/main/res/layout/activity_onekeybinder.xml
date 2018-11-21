@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_regist"
+        android:drawableLeft="@drawable/icon_phoe"
+        android:drawablePadding="15dp"
+        android:hint="请输入手机号"
+        android:maxLength="11"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/et_phone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_regist"
+        android:drawableLeft="@drawable/codeicon"
+        android:drawablePadding="10dp"
+        android:hint="请填写验证码"
+        android:maxLength="6"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_getcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/editText"
+        android:layout_alignBottom="@id/editText"
+        android:layout_alignEnd="@id/editText"
+        android:layout_alignRight="@id/editText"
+        android:layout_marginRight="12dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:text="获取验证码"
+        android:textColor="@color/colorZhu"
+        android:textSize="14sp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/iv_agree"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/checkbox_off" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="同意"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_regist_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:text="《白富美海淘注册协议》"
+            android:textColor="@color/colorZhu"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/ll_register"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/shape_circle_range1"
+        android:text="@string/onekey_binder"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

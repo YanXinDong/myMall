@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/jindu_a" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:text="@string/authentication" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_jiantou1"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-15dp"
+            android:src="@drawable/arrow_b" />
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_change2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/jindu_b1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:text="@string/replace_phone_number" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_jiantou2"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-15dp"
+            android:src="@drawable/arrow_b" />
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_change3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/jindu_c1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:text="@string/update_completed" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_success"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:text="恭喜您已成功更换了绑定手机号"
+        android:textColor="@color/color_black_333333"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/current_phonenumber" />
+
+    <LinearLayout
+        android:id="@+id/ll_newphonenumber"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_circle_range2"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_newphonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/icon_phoe"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:maxLength="11"
+            android:hint="请输入新的手机号" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_yangzhengma"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_circle_range2"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_yanzhengma"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:background="@null"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/codeicon"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:maxLength="6"
+            android:hint="@string/write_verification_coder" />
+
+        <TextView
+            android:id="@+id/tv_getyanzhengma"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/colorZhu"
+            android:layout_marginLeft="25dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:text="@string/get_verification_code" />
+
+        <TextView
+            android:id="@+id/tv_getnewyanzhengma"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="获取验证码"
+            android:textColor="@color/colorZhu"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/btn_confirmpwd1"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_circle_range1"
+        android:text="@string/verification"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_confirmpwd2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_circle_range1"
+        android:text="提交"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_confirmpwd3"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_circle_range1"
+        android:text="返回个人中心"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+</LinearLayout>

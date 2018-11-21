@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_refund_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/search_text_color"
+                    android:textSize="22sp"
+                    tools:text="退款状态" />
+
+                <Button
+                    android:id="@+id/btn_contact_the_merchant"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="90dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/tv_refund_status"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/shape_circle_range2"
+                    android:text="联系商家"
+                    android:textColor="@color/colorZhu"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_refund_status"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:text="退款倒计时" />
+
+                <TextView
+                    android:id="@+id/tv_explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_time"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:text="平台审核时间为7个工作日(节假日、周末除外)，请您耐心等待噢。" />
+
+                <Button
+                    android:id="@+id/btn_add_express_information"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="335dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/tv_explain"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/shape_circle_range1"
+                    android:text="填写快递信息"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/activity_add_express_information"
+                android:id="@+id/include_express_info"
+                android:visibility="gone"
+                />
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_name1"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:ellipsize="end"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="2"
+                    android:minHeight="@dimen/margin_35"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="12sp"
+                    tools:text="Nike Air 最新天蓝JDJO nike newJFKAJKLFjifdjif" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sale_type"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/saleType"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="end|center_vertical"
+                    android:minHeight="@dimen/margin_35"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="12sp"
+                    tools:text="退款（无需退货）" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sale_num"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/salenum"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="end|center_vertical"
+                    android:minHeight="@dimen/margin_35"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="12sp"
+                    tools:text="*1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/return_reason"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/returnReason"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="end|center_vertical"
+                    android:minHeight="@dimen/margin_35"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="12sp"
+                    tools:text="缺货" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/refund_money"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/refundMoney"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="end|center_vertical"
+                    android:minHeight="@dimen/margin_35"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="12sp"
+                    tools:text="2625.00元" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pay_fee"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/payFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="end|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="12sp"
+                    tools:text="3.00元" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/payFee"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:text="@string/pay_fee_tip"
+                    android:textColor="@color/red"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/handler"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/handler"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="end|center_vertical"
+                    android:minHeight="@dimen/margin_35"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="12sp"
+                    tools:text="2562.00元" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="@dimen/margin_35"
+                    android:text="@string/return_intro"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/returnIntro"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="12sp"
+                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin " />
+
+                <ImageView
+                    android:id="@+id/iv_product_refund"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/zhanwei1"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/replyBuyerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="@dimen/margin_35"
+                    android:text="@string/reply_buyer"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/replyBuyerStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/replyBuyerTitle"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:minHeight="@dimen/margin_35"
+                    android:text="@string/agree"
+                    android:textColor="@color/color_black_ff666666"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

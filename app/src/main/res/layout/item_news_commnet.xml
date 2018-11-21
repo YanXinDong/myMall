@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="5dp"
+    android:id="@+id/rl_layout"
+    android:background="@color/white">
+
+    <com.BFMe.BFMBuyer.view.CircularImageView
+        android:id="@+id/civ_head"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/rabit" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@id/civ_head"
+        android:layout_toRightOf="@id/civ_head"
+        tools:text="白小白"
+        android:textColor="@color/color_black_333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/tv_user_name"
+        android:layout_toRightOf="@id/tv_user_name"
+        tools:text="评论了你"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/tv_news_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_user_name"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/shape_circle_range_bg_fa_side_f0"
+        android:paddingBottom="18dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        tools:text="可以是可见的，也可以是不可见的，可以是作用性的。也可以是无作用性的。"
+        android:textColor="@color/color_black_333333"
+        android:textSize="11sp" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+         />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/iv_icon"
+        android:layout_toStartOf="@id/iv_icon"
+        android:text="2017-07-13"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/color_grey_999999"
+        android:textSize="9sp" />
+</RelativeLayout>

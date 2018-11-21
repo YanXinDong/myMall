@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_coment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_user_photo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/zwyj4" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="130dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:textColor="#FF333333"
+            android:textSize="11sp"
+            android:layout_toRightOf="@id/iv_user_photo"
+            tools:text="张三" />
+
+
+        <com.BFMe.BFMBuyer.view.RatingBar
+            android:id="@+id/ll_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_user_name"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv_user_photo"
+            app:starEmpty="@drawable/_off"
+            app:starFill="@drawable/_on"
+            app:starImageSize="10dp"
+            app:starPadding="2dp"
+            app:stepSize="Full"
+            />
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            tools:text="2016.6.23 15:00:03"
+            android:textColor="#FF999999"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#FF666666"
+        android:textSize="12sp"
+        android:id="@+id/tv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:text="不错，不错，很好的商品，大爱，么么哒……" />
+
+    <GridView
+        android:id="@+id/gv_product_comment"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:horizontalSpacing="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:numColumns="3"
+         />
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ta_talk_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translucence_gray_fafafafa"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_f0f0f0"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/et_add_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="start|center"
+            android:hint="@string/add_comment"
+            android:maxHeight="100dp"
+            android:minHeight="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/color_black_333333"
+            android:textColorHint="@color/color_grey_999999"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/img_btn_send"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/icon_send" />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_ta_talk_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_comment" />
+
+    <include layout="@layout/my_base_title" />
+
+</RelativeLayout>

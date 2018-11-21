@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_commodity_info"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/iv_order_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+         />
+
+    <TextView
+        android:id="@+id/tv_order_new_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/iv_order_icon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorZhu"
+        android:textSize="11sp"
+        tools:text="￥101010" />
+
+    <TextView
+        android:id="@+id/tv_order_commodity_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_order_icon"
+        android:layout_toEndOf="@id/iv_order_icon"
+        android:layout_toLeftOf="@id/tv_order_new_price"
+        android:layout_toRightOf="@id/iv_order_icon"
+        android:layout_toStartOf="@id/tv_order_new_price"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:minLines="2"
+        android:textColor="@color/font_black"
+        android:textSize="12sp"
+        tools:text="法国Lancome兰蔻玫瑰露清莹柔肤化妆水…法国Lancome兰蔻玫瑰露清莹柔肤化妆水法国Lancome兰蔻玫瑰露清莹柔肤化妆水" />
+
+    <TextView
+        android:id="@+id/tv_order_size_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_order_commodity_name"
+        android:layout_alignStart="@id/tv_order_commodity_name"
+        android:layout_below="@id/tv_order_commodity_name"
+        tools:text="圆管/12号"
+        android:layout_marginTop="2dp"
+        android:textSize="10sp"
+        android:textColor="@color/app_content_color" />
+
+
+    <TextView
+        android:id="@+id/tv_order_old_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_order_new_price"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/gray_btn"
+        android:textSize="10sp"
+        tools:text="￥110" />
+
+    <TextView
+        android:id="@+id/tv_order_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_order_old_price"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="2dp"
+        tools:text="x3"
+        android:textColor="@color/app_content_color"
+        android:textSize="11sp" />
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit_identity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_regist"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/import_name"
+        android:maxLength="8"
+        android:maxLines="1"
+        android:paddingLeft="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/color_grey_999999"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_id_number"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_regist"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/import_id_number"
+        android:maxLines="1"
+        android:paddingLeft="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/color_grey_999999"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_savenick"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_circle_range1"
+        android:text="@string/save"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

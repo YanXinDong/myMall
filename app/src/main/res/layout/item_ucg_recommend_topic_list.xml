@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:yxd="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_recommend_topic"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_icon"
+        android:layout_margin="10dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="5dp"
+        android:maxLines="1"
+        tools:text="可以是可见的，也可以是不可见的，可以是作用性的。也可以是无作用性的。"
+        android:textColor="@color/color_black_333333"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <com.BFMe.BFMBuyer.view.CircularImageView
+        android:id="@+id/civ_head_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignLeft="@id/tv_info"
+        android:layout_alignStart="@id/tv_info"
+        android:layout_below="@id/tv_info"
+        android:layout_marginBottom="9dp"
+        yxd:type="circle" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_info"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/civ_head_icon"
+        android:ellipsize="end"
+        android:maxEms="6"
+        android:maxLines="1"
+        tools:text="sadasdsandsandnsalkdnak"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="10sp" />
+
+    <CheckBox
+        android:id="@+id/cb_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_info"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="3dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/collect_select"
+        android:drawablePadding="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/color_black_ff666666"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/iv_start"
+        android:layout_width="67dp"
+        android:layout_height="26dp"
+        android:src="@drawable/icon_audit"
+        android:visibility="gone" />
+
+</RelativeLayout>

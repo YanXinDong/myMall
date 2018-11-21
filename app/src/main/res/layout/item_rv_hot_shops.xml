@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yxd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.BFMe.BFMBuyer.view.CircularImageView
+        android:id="@+id/civ_head"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/zhanwei1"
+        yxd:type="circle" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/civ_head"
+        android:layout_toRightOf="@id/civ_head"
+        tools:text="Gala Gonzalez"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_user_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_user_name"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/civ_head"
+        android:layout_toRightOf="@id/civ_head"
+        android:text="收藏：9999"
+        android:textColor="@color/image_checked_bg"
+        android:textSize="12sp" />
+
+    <RadioButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/heart_off"
+        android:button="@null" />
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:layout_below="@+id/civ_head"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/iv_shop_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner" />
+        <View
+            android:id="@+id/view_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            />
+        <com.BFMe.BFMBuyer.view.MyRecyclerView
+            android:id="@+id/rv_hot_shop_commodity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_hot_shop_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_content"
+        android:layout_margin="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="我们在日本有大型实体店，我们是代购的好帮手！主营日本护肤品，化妆品、保健品、美容仪等。主营品牌：pola、cpb、Albion、Anessa、sheseido。。。"
+        android:textColor="#ff2d2f31" />
+</RelativeLayout>

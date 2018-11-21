@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:yxd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.BFMe.BFMBuyer.view.CircularImageView
+        android:id="@+id/civ_user_head"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/zhanwei1"
+        yxd:type="circle" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/civ_user_head"
+        android:layout_toRightOf="@id/civ_user_head"
+        android:textColor="@color/color_black_333333"
+        android:textStyle="bold"
+        tools:text="时尚临风" />
+
+    <CheckBox
+        android:id="@+id/cb_attention"
+        android:layout_width="54dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/selecter_notice"
+        android:button="@null" />
+
+
+    <TextView
+        android:id="@+id/tv_talk_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/civ_user_head"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="35dp"
+        android:lineSpacingExtra="6dp"
+        android:textColor="@color/color_black_333333"
+        android:textSize="12sp"
+        tools:text="多肉植物 肉肉~多肉拼盘违反抹去我我欧股hiUR四大金刚铂金
+二咖啡馆可萝卜干额就本店店主长期居住在意大利， 有6-7个
+小时时差。本店所有货源均来自意大利各大精品专柜打折村，
+保证正品。支持发小视频哟~~" />
+
+</RelativeLayout>
